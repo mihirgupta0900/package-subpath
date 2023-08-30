@@ -1,0 +1,40 @@
+{
+  "name": "lib",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "/dist",
+    "/subtract"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "tsup",
+    "dev": "pnpm run build --watch"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "dedent": "^1.5.1",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
