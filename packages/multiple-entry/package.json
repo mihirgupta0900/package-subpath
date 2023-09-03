@@ -1,10 +1,9 @@
 {
-  "name": "lib",
+  "name": "multiple-entry",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "/utils",
     "/dist"
   ],
   "license": "MIT",
@@ -14,11 +13,13 @@
     "dev": "pnpm run build --watch"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "dedent": "^1.5.1",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "tsup": "^7.2.0",
-    "typescript": "^4.5.2",
-    "multiple-entry": "workspace:*"
+    "fs-extra": "^11.1.1",
+    "typescript": "^4.5.2"
   },
   "exports": {
     ".": {
@@ -26,12 +27,6 @@
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./utils": {
-      "import": "./dist/utils/index.mjs",
-      "require": "./dist/utils/index.js",
-      "types": "./dist/utils/index.d.ts",
-      "default": "./dist/utils/index.js"
     },
     "./package.json": "./package.json"
   }
