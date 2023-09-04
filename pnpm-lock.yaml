@@ -75,15 +75,15 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../eslint-config-custom
-      multiple-entry:
-        specifier: workspace:*
-        version: link:../multiple-entry
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
       tsup:
         specifier: ^7.2.0
         version: 7.2.0(typescript@4.9.5)
+      tsup-subpath-exports:
+        specifier: workspace:*
+        version: link:../multiple-entry
       typescript:
         specifier: ^4.5.2
         version: 4.9.5
