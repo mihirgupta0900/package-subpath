@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint .",
     "build": "tsup",
-    "dev": "pnpm run build --watch"
+    "dev": "pnpm run build --watch",
+    "prepare": "pnpm run build"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
