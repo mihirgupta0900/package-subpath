@@ -5,9 +5,9 @@ import path from "path";
 type Exports = Record<
   string,
   | {
-      import: string;
+      import?: string;
       require: string;
-      types: string;
+      types?: string;
       default: string;
     }
   | string
@@ -54,10 +54,12 @@ const generatePackageExports = async (entryPoints: Array<string>) => {
     )}.d.ts`;
 
     exports[name] = {
-      import: distSourceFileEs,
+      ...((await fs.pathExists(distSourceFileEs))
+        ? { import: distSourceFileEs }
+        : {}),
       require: distSourceFile,
-      types: distTypesFile,
       default: distSourceFile,
+      ...((await fs.pathExists(distTypesFile)) ? { types: distTypesFile } : {}),
     };
   }
 
