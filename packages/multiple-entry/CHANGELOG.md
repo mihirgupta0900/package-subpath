@@ -1,5 +1,11 @@
 # tsup-subpath-exports
 
+## 0.0.4
+
+### Patch Changes
+
+- 28c64e1: check if mjs file exists
+
 ## 0.0.3
 
 ### Patch Changes
