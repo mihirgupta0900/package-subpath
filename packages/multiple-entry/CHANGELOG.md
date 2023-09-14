@@ -1,5 +1,11 @@
 # tsup-subpath-exports
 
+## 0.0.5
+
+### Patch Changes
+
+- a75d7d3: default option at the end
+
 ## 0.0.4
 
 ### Patch Changes
