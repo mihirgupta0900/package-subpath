@@ -54,12 +54,12 @@ const generatePackageExports = async (entryPoints: Array<string>) => {
     )}.d.ts`;
 
     exports[name] = {
+      ...((await fs.pathExists(distTypesFile)) ? { types: distTypesFile } : {}),
       ...((await fs.pathExists(distSourceFileEs))
         ? { import: distSourceFileEs }
         : {}),
       require: distSourceFile,
       default: distSourceFile,
-      ...((await fs.pathExists(distTypesFile)) ? { types: distTypesFile } : {}),
     };
   }
 
